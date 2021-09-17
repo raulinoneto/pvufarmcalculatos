@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <section class="section ">
+            <h1 class="title">Farm</h1>
+            <h2 class="subtitle">
+                Fill your plants
+            </h2>
+            <div class="columns">
+                <div class="column is-two-fifths">
+                    <input onchange="changePlant(this)" list="plant-list" id="plant-selector" class="input is-primary" placeholder="Select Your Plant">
+                    <datalist id="plant-list">
+                        <option value="Sunflower Mama"></option>
+                        <option value="Sunflower Sapling"></option>
+                        <option value="NFT Plant"></option>
+                    </datalist>
+                </div>
+            </div>
+            <div class="columns" id="nft-details"></div>
+
+            <div class="columns">
+                <div class="column">
+                    <button onclick="addPlant()" class="button is-success">Add Plant</button>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <table class="table is-hidden" id="plants-tab">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Plant</th>
+                                <th class="text-center">LE/Hour</th>
+                                <th class="text-center">LE/Day</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="plants"></tbody>
+                    </table>
+                </div>
+                
+                <div class="column" id="pvu-earned"></div>
+            </div>
+            
+        </section>
+        <script src="assets/js/index.js"></script>
+    </div>
+
+</body>
+
+</html>
